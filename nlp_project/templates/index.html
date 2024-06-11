@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}">
+    <style>
+        /* Additional CSS styling for the card */
+        .card {
+            background-color: #000000;
+            padding: 40px; /* Increased padding */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 600px; /* Adjusted width */
+            margin: 0 auto; /* Centering the card horizontally */
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 45px;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 20px;
+        }
+
+        .resume-button {
+            background-color: #19ce43;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-button:hover {
+            background-color: #128c2b;
+        }  
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('feature') }}">Features</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            <li><a href="{{ url_for('pricing') }}">pricing</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li> <!-- Link to the About Us page -->
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+        </ul>
+    </nav>
+        
+    <div class="container-fluid">
+        <h2 data-text="JOBPLUS">JOBPLUS</h2>
+    </div>
+
+    <!-- Description card about Jobplus Resume Parser and Analyzer -->
+    <div class="card">
+        <h3>About Jobplus </h3>
+        <p>Jobplus is a powerful tool designed to streamline the recruitment process by automatically extracting and analyzing key information from resumes. With Jobplus, you can save time and make more informed hiring decisions.</p>
+        <p>Efficient extraction of skills, work experience, and education from resumes in various formats.</p>
+        <p>Advanced analysis capabilities to identify top candidates and match them with job requirements.</p>
+        <p>Experience the benefits of Jobplus Resume Parser and Analyzer today!</p>
+        <form action="/submit" method="post">
+            <button id="resume-button" class="resume-button" type="submit">Start Upload</button>
+        </form>
+    </div>    
+</body>
+</html>

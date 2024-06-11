@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    margin-left: 100px;
+}
+
+h2 {
+    position: relative;
+    font-size: 14vh;
+    color: #000;
+    -webkit-text-stroke: 0.3vw  #000000;
+}
+
+h2:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #0fd7d7;
+    -webkit-text-stroke: 0vw  #000000;
+    border-right: 2px solid #0fd7d7;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0%, 100%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
+}
+
+nav {
+    background-color: #201f1f;
+    position: fixed;
+    width: 100%; /* Spanning the full width */
+    top: 0;
+    right: 0; /* Aligning to the right side */
+    padding: 10px 20px; /* Adding padding for better appearance */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: right; /* Aligning the list items to the right */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color:#0fd7d7;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+nav ul li a:hover {
+    background-color:#000000;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+}
+
+#parseResumeBtn {
+    background-color: #1f9321;
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#parseResumeBtn:hover {
+    background-color: #1f9321;
+}

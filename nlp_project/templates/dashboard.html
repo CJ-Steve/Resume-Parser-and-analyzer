@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Upload</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+        display: flex;
+        flex-direction: column;
+        
+        max-width: 600px;
+        height: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #000000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 32px;
+            animation: slideInDown 0.05s ease-out;
+        }
+        h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 22px;
+            animation: slideInLeft 0.4s ease-out;
+        }
+        form {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        button {
+        padding: 12px 24px;
+        background-color: #18ad3a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; 
+        font-size: 20px;
+        animation: pulse 1s infinite alternate;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Fade-in animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-in animation keyframes */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Button pulse animation */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>RESUME UPLOADED SUCCESSFULLY</h1><br><br>
+        <h2>Name:               {{ name }}</h2>
+        <h2>Email:              {{ email }}</h2>
+        <h2>Contact:            {{ contact_number }}</h2>
+        <h2>Education:          {{ education }}</h2>
+        <h2>Technical Skills:   {{ extracted_skills }}</h2>
+        <h2>Soft Skills:        {{ extracted_soft_skills }}</h2>
+        <h2>Hobbies:            {{ hobbies }}</h2>
+        
+        <form action="/back" method="post"><br>
+            <button type="submit">Back to Home</button>
+        </form>
+        <form action="/analyzer" method="post"><br>
+            <button type="submit">Analyzer</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Resume Parser & Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            background: black;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color:rgb(0, 242, 255);
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info h2 {
+            color: #007bff;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        .contact-info li:before {
+            content: "•";
+            margin-right: 5px;
+            color: #007bff;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333; /* Added color for labels */
+        }
+
+        form input,
+        form textarea {
+            width: calc(100% - 22px); /* Adjusted width */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box; /* Added box-sizing */
+        }
+
+        form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <div class="card">
+            <p>Thank you for your interest in our Resume Parser & Analyzer service. Please feel free to get in touch with us using any of the following methods:</p>
+        </div>
+        
+        <div class="card contact-info">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Email: info@resumeparseranalyzer.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Address: 123 Main Street, City, Country</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <p>Alternatively, you can use the form below to send us a message:</p>
+            <form action="submit_contact_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
